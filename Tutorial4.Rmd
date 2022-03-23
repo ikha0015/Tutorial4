@@ -1,10 +1,31 @@
 ---
 title: "Tutorial4.Rmd"
 author: "Ishita Khanna"
-output: 
 output:
-bookdown::html_document2
+  bookdown::html_document2
 keep_md: true
-date: '2022-03-23
+date: '2022-03-23'
 ---
+
+```{r}
+install.packages("tidyverse")
+```
+
+```{r}
+library(tidyverse)
+```
+
+#: Learning to reference figures\#fig.cap is figure caption
+
+```{r Figref, fig.cap="Random noise figure"}
+x = seq(1:100)
+y = rnorm(100)
+dat = data.frame(x, y)
+ggplot(dat, aes(x = x, y = y)) +
+geom_line()
+
+```
+
+this is to refer \@ref(fig:Figref)
+
 
